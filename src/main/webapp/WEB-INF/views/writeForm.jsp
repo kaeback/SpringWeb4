@@ -14,11 +14,11 @@
 <table>
 	<tr>
 		<th>이름</th>
-		<td><input type="text" name="name" id="name" maxlegth="10" required="required"></td>
+		<td><input type="text" name="name" id="name" maxlength="10" required="required"></td>
 	</tr>
 	<tr>
 		<th>비밀번호</th>
-		<td><input type="password" name="password" id="password" maxlegth="10" required="required"></td>
+		<td><input type="password" name="password" id="password" maxlength="10" required="required"></td>
 	</tr>
 	<tr>
 		<th>내용</th>
