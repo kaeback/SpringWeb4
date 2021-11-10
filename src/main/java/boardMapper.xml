@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.web4.dao.BoardMapper">
+<!-- 글 저장 -->
+<insert id="insert" parameterType="board">
+	insert into board (boardnum, name, password, content)
+	values (board_seq.nextval, #{name}, #{password}, #{content})
+</insert>
+
+<!-- 모든 글 검색 -->
+<select id="select" resultType="board">
+	select * from board order by boardnum desc
+</select>
+
+<!-- 글번호와 비밀번호로 글 삭제 -->
+<delete id="delete" parameterType="board">
+	delete from board where boardnum = #{boardnum} and password = #{password}
+</delete>
+
+<!-- 글번호와 비밀번호로 글 삭제 2 -->
+<delete id="delete2" parameterType="map">
+	delete from board where boardnum = #{boardnum} and password = #{password}
+</delete>
+
+<!-- 글번호와 비밀번호로 글 삭제 3 -->
+<delete id="delete3">
+	delete from board where boardnum = #{0} and password #{1}
+</delete>
+</mapper>
